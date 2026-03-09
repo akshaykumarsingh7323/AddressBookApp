@@ -1,7 +1,6 @@
 package com.addressbook.model;
 
 public class Contact {
-
     private int id;
     private String firstName;
     private String lastName;
@@ -100,5 +99,15 @@ public class Contact {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "Contact{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", city='" + city + '\'' +
+                '}';
     }
 }
