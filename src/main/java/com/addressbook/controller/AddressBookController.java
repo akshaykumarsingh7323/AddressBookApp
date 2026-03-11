@@ -2,9 +2,7 @@ package com.addressbook.controller;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.springframework.web.bind.annotation.*;
-
 import com.addressbook.model.Contact;
 
 @RestController
@@ -24,6 +22,14 @@ public class AddressBookController {
         contactList.add(contact);
 
         return "Contact added successfully";
+    }
+    
+    // UC5 - Add Multiple Contacts
+    
+    @PostMapping("/addMultiple")
+    public String addMultipleContacts(@RequestBody List<Contact> contacts) {
+        contactList.addAll(contacts);
+        return "Multiple contacts added successfully";
     }
 
     @GetMapping("/contacts")
