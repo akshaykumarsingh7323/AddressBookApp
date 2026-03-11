@@ -9,5 +9,4 @@ class AddressBookAppApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
